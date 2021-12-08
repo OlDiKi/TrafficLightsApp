@@ -8,17 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var redLight: UIView!
-    @IBOutlet weak var yellowLight: UIView!
-    @IBOutlet weak var greenLight: UIView!
+    @IBOutlet weak var redLightView: UIView!
+    @IBOutlet weak var yellowLightView: UIView!
+    @IBOutlet weak var greenLightView: UIView!
     
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var startButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        redLightView.alpha = 0.3
+        yellowLightView.alpha = 0.3
+        greenLightView.alpha = 0.3
+        
+        redLightView.layer.cornerRadius = 90
+        yellowLightView.layer.cornerRadius = 90
+        greenLightView.layer.cornerRadius = 90
     }
 
-
+    @IBAction func startPressed() {
+        redLightView.alpha = 1
+        
+    }
+    
 }
 
