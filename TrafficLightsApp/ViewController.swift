@@ -27,8 +27,7 @@ class ViewController: UIViewController {
 
     @IBAction func startPressed() {
         redLightView.alpha = 1
-        
+        startButton.setTitle("NEXT", for: .normal)
+      
     }
-    
 }
-
